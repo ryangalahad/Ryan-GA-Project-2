@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const PopularRates = (props) => {
@@ -9,6 +9,14 @@ const PopularRates = (props) => {
 
     function setExchangeRate2() {
         props.onSave2();
+    }
+
+    function setExchangeRate3() {
+        props.onSave3();
+    }
+
+    function setExchangeRate4() {
+        props.onSave4();
     }
 
     const [isSaving, setIsSaving] = useState(false);
@@ -33,6 +41,18 @@ const PopularRates = (props) => {
             <div style={{ margin: '20px'}}>
                 <button onClick={setExchangeRate2} style={{padding: '10px 20px'}}>
                     <Link to="/" style={{textDecoration: 'none', color: 'black'}}> EUR / USD </Link>
+                </button>
+            </div>
+
+            <div style={{ margin: '20px'}}>
+                <button onClick={setExchangeRate3} style={{padding: '10px 20px'}}>
+                    <Link to="/" style={{textDecoration: 'none', color: 'black'}}> USD / JPY </Link>
+                </button>
+            </div>
+
+            <div style={{ margin: '20px'}}>
+                <button onClick={setExchangeRate4} style={{padding: '10px 20px'}}>
+                    <Link to="/" style={{textDecoration: 'none', color: 'black'}}> EUR / GBP </Link>
                 </button>
             </div>
         </div>

@@ -14,7 +14,6 @@ const InputAmount = (props) => {
                     onChange = {handleTypedAmount}
                     placeholder='Enter Amount:'
             />
-
         </div>
     );
 };

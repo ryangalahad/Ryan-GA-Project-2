@@ -21,6 +21,16 @@ const App = () => {
     setToCurrency("USD");
   }
 
+  function handlePopular3() {
+    setFromCurrency("USD");
+    setToCurrency("JPY");
+  }
+
+  function handlePopular4() {
+    setFromCurrency("EUR");
+    setToCurrency("GBP");
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -46,7 +56,7 @@ const App = () => {
           <Route
             path="/popular"
             element={
-              <PopularRates onSave={handlePopular1} onSave2={handlePopular2} />
+              <PopularRates onSave={handlePopular1} onSave2={handlePopular2} onSave3={handlePopular3} onSave4={handlePopular4} />
             }
           />
           <Route path="/about" element={<AboutApp />} />
