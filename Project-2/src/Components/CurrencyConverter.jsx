@@ -33,7 +33,7 @@ const CurrencyConverter = (props) => {
     setError(null); // 2. Clear any old errors
 
     try {
-      const API_KEY = "d0640925910755a76fe5be4c";
+      const API_KEY = import.meta.env.VITE_EXCHANGE_CURRENCY_API;
       const res = await fetch(
         `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${props.fromCurrency}`
       );
@@ -68,23 +68,10 @@ const CurrencyConverter = (props) => {
   }, [props.toCurrency]);
 
   // Below will only be invoked when you have and  exchange Rate. Defualt is null
-  const convertedAmount = exchangeRate
-    ? (amount * exchangeRate).toFixed(2)
+  const convertedAmount = exchangeRate // Converted amount is essentially the total converted amount.
+    ? (amount * exchangeRate).toFixed(5)
     : "---";
 
-  // Function to track user typed amount
-  function handleTypedAmount(event) {
-    setAmount(event.target.value);
-  }
-
-  //Function to track user selected currency
-  function fromCurrencyChange(event) {
-    props.setFromCurrency(event.target.value);
-  }
-
-  function toCurrencyChange(event) {
-    props.setToCurrency(event.target.value);
-  }
 
 
   return (
@@ -92,16 +79,16 @@ const CurrencyConverter = (props) => {
       <h2>Currency Converter 💱</h2>
 
       <FromCurrencies
-        setFromCurrency={props.fromCurrency}
-        passFromCurrency={fromCurrencyChange}
+        fromCurrency={props.fromCurrency}
+        setFromCurrency = {props.setFromCurrency}
         allCurrencies={CURRENCIES}
       />
 
-      <InputAmount passAmount={amount} passTypeFunction={handleTypedAmount} />
+      <InputAmount amount={amount} setAmount={setAmount}/>
 
       <ToCurrencies
-        setToCurrency={props.toCurrency}
-        passToCurrency={toCurrencyChange}
+        toCurrency={props.toCurrency}
+        setToCurrency = {props.setToCurrency}
         allCurrencies={CURRENCIES}
       />
 
@@ -118,7 +105,7 @@ const CurrencyConverter = (props) => {
               </span>
             </h3>
             <p className="rate-info">
-              Exchange Rate: {props.fromCurrency} = {exchangeRate} {props.toCurrency}
+              Exchange Rate: 1 {props.fromCurrency} = {exchangeRate} {props.toCurrency}
             </p>
           </div>
         )}

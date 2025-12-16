@@ -102,7 +102,7 @@ const FavouritesManager = (props) => {
 
   return (
     <div className="favorites-container">
-      <h2>Currency Favourites ⭐️ </h2>
+      <h2>⭐️ Currency Favourites ⭐️ </h2>
       <button
         onClick={saveFavourites}
         disabled={isLoading}
