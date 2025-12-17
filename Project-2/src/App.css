@@ -20,24 +20,24 @@ html, body, #root {
 
 .main-content-area {
   display: flex;
-  justify-content: center; /* Center the two columns horizontally */
-  align-items: flex-start; /* Align content to the top */
-  width: 95%; /* Use almost full width */
-  max-width: 1200px; /* Optional: Limit max width on large screens */
-  gap: 30px; /* Spacing between the converter and favorites */
-  margin-top: 50px; /* Push content down from the NavBar */
+  justify-content: center; 
+  align-items: flex-start; 
+  width: 95%;
+  max-width: 1200px; 
+  gap: 30px;
+  margin-top: 50px; 
 }
 
 .converter-container {
-  /* Keep existing styles, but adjust width/flex to fit next to favorites */
+
   background-color: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 500px; 
-  flex-shrink: 0; /* Prevents converter from shrinking */
+  flex-shrink: 0; 
   text-align: center;
-  margin: 0; /* REMOVE margin: auto; as it's now in a new flex parent */
+  margin: 0; 
 }
 
 .favorites-container {
@@ -45,7 +45,7 @@ html, body, #root {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    flex-grow: 1; /* Allows it to take up remaining space */
+    flex-grow: 1; 
     min-width: 300px;
     max-width: 450px;
 }
@@ -116,6 +116,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f0f2f5; /* Optional: Makes the background light grey like your screenshot */
+  background-color: #f0f2f5;
   font-family: sans-serif;
 }

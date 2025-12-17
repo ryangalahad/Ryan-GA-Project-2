@@ -242,7 +242,6 @@ const CurrencyConverter = (props) => {
       />
 
       <LoadingError passLoading={isLoading} passError={error} />
-      {/* FINAL RESULT DISPLAY */}
 
       {!isLoading &&
         !error && ( // not loading and no error display this
