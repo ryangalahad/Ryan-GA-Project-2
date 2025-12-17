@@ -11,13 +11,18 @@ const FromCurrencies = (props) => {
     return (
         <div className="input-group">
         <label>From:</label>
-        <select value={props.fromCurrency} onChange={fromChange}>
-            {props.allCurrencies.map((currency) => (
-                <option key = {currency} value = {currency}>
-                    {currency}
-                </option>
-            ))}
-        </select>
+        <input 
+                type="text"
+                value={props.fromCurrency} 
+                onChange={fromChange} 
+                list="currency-options-from" 
+                placeholder="Type or select a currency"
+        />
+        <datalist id="currency-options-from">
+                {props.allCurrencies.map((currency) => (
+                    <option key={currency} value={currency} />
+                ))}
+        </datalist>
       </div>
     );
 };

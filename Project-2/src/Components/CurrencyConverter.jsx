@@ -20,6 +20,157 @@ const CURRENCIES = [
   "SGD",
   "NOK",
   "MYR",
+  "AED",
+  "AFN",
+  "ALL",
+  "AMD",
+  "ANG",
+  "AOA",
+  "ARS",
+  "AWG",
+  "AZN",
+  "BAM",
+  "BBD",
+  "BDT",
+  "BGN",
+  "BHD",
+  "BIF",
+  "BMD",
+  "BND",
+  "BOB",
+  "BRL",
+  "BSD",
+  "BTN",
+  "BWP",
+  "BYN",
+  "BZD",
+  "CDF",
+  "CLF",
+  "CLP",
+  "CNH",
+  "COP",
+  "CRC",
+  "CUP",
+  "CVE",
+  "CZK",
+  "DJF",
+  "DKK",
+  "DOP",
+  "DZD",
+  "EGP",
+  "ERN",
+  "ETB",
+  "FJD",
+  "FKP",
+  "FOK",
+  "GEL",
+  "GGP",
+  "GHS",
+  "GIP",
+  "GMD",
+  "GNF",
+  "GTQ",
+  "GYD",
+  "HNL",
+  "HRK",
+  "HTG",
+  "HUF",
+  "IDR",
+  "ILS",
+  "IMP",
+  "INR",
+  "IQD",
+  "IRR",
+  "ISK",
+  "JEP",
+  "JMD",
+  "JOD",
+  "KES",
+  "KGS",
+  "KHR",
+  "KID",
+  "KMF",
+  "KWD",
+  "KYD",
+  "KZT",
+  "LAK",
+  "LBP",
+  "LKR",
+  "LRD",
+  "LSL",
+  "LYD",
+  "MAD",
+  "MDL",
+  "MGA",
+  "MKD",
+  "MMK",
+  "MNT",
+  "MOP",
+  "MRU",
+  "MUR",
+  "MVR",
+  "MWK",
+  "MXN",
+  "MZN",
+  "NAD",
+  "NGN",
+  "NIO",
+  "NPR",
+  "OMR",
+  "PAB",
+  "PEN",
+  "PGK",
+  "PHP",
+  "PKR",
+  "PLN",
+  "PYG",
+  "QAR",
+  "RON",
+  "RSD",
+  "RUB",
+  "RWF",
+  "SAR",
+  "SBD",
+  "SCR",
+  "SDG",
+  "SHP",
+  "SLE",
+  "SLL",
+  "SOS",
+  "SRD",
+  "SSP",
+  "STN",
+  "SYP",
+  "SZL",
+  "THB",
+  "TJS",
+  "TMT",
+  "TND",
+  "TOP",
+  "TRY",
+  "TTD",
+  "TVD",
+  "TWD",
+  "TZS",
+  "UAH",
+  "UGX",
+  "UYU",
+  "UZS",
+  "VES",
+  "VND",
+  "VUV",
+  "WST",
+  "XAF",
+  "XCD",
+  "XCG",
+  "XDR",
+  "XOF",
+  "XPF",
+  "YER",
+  "ZAR",
+  "ZMW",
+  "ZWG",
+  "ZWL",
 ];
 
 const CurrencyConverter = (props) => {
@@ -72,22 +223,21 @@ const CurrencyConverter = (props) => {
     ? (amount * exchangeRate).toFixed(5)
     : "---";
 
-
   return (
     <div className="converter-container">
       <h2>Currency Converter 💱</h2>
 
       <FromCurrencies
         fromCurrency={props.fromCurrency}
-        setFromCurrency = {props.setFromCurrency}
+        setFromCurrency={props.setFromCurrency}
         allCurrencies={CURRENCIES}
       />
 
-      <InputAmount amount={amount} setAmount={setAmount}/>
+      <InputAmount amount={amount} setAmount={setAmount} />
 
       <ToCurrencies
         toCurrency={props.toCurrency}
-        setToCurrency = {props.setToCurrency}
+        setToCurrency={props.setToCurrency}
         allCurrencies={CURRENCIES}
       />
 
@@ -104,7 +254,8 @@ const CurrencyConverter = (props) => {
               </span>
             </h3>
             <p className="rate-info">
-              Exchange Rate: 1 {props.fromCurrency} = {exchangeRate} {props.toCurrency}
+              Exchange Rate: 1 {props.fromCurrency} = {exchangeRate}{" "}
+              {props.toCurrency}
             </p>
           </div>
         )}

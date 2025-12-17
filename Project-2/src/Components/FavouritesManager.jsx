@@ -38,7 +38,7 @@ const FavouritesManager = (props) => {
 
   useEffect(() => {
     fetchFavourites();
-  }, [fetchFavourites]);
+  }, [fetchFavourites]); // Evertime it changes, it re-renders the function.
 
   const saveFavourites = async () => {
     if (!props.currentFrom || !props.currentTo) {
@@ -68,7 +68,8 @@ const FavouritesManager = (props) => {
       if (!res.ok) {
         throw new Error("Failed to save favourite ");
       }
-      await fetchFavourites();
+      await fetchFavourites(); // The await keyword pauses the execution of the saveFavourites function until fetchFavourites has completed its operation.
+      // Very Important. Will invoke fetchFavourites and run setFavourites with new data.
     } catch (error) {
       setError(error.message);
     } finally {
