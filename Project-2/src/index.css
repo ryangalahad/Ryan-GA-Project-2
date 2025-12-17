@@ -66,3 +66,38 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* --- Styling for the About Page --- */
+
+.about-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limits the width for better readability */
+    width: 90%;
+    margin: 50px auto; /* Centers the component on the page */
+    line-height: 1.6;
+}
+
+.about-title {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    list-style-type: '🌐 '; 
+    padding-left: 20px;
+}
+
+.about-section li {
+    margin-bottom: 10px;
+}
