@@ -48,6 +48,7 @@ html, body, #root {
     flex-grow: 1; 
     min-width: 300px;
     max-width: 450px;
+    text-align: center;
 }
 
 .input-row {
