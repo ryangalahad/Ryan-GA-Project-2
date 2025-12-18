@@ -21,7 +21,7 @@ const NavBar = () => {
           <Link to="/about">About 📖 </Link>
         </li>
         <li>
-          <Link to="/popular"> Popular Exchange Rates ✨</Link>
+          <Link to="/popular">✨ Popular Exchange Rates ✨</Link>
         </li>
       </ul>
     </nav>
