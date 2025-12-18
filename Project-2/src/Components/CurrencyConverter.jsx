@@ -220,7 +220,7 @@ const CurrencyConverter = (props) => {
 
   // Below will only be invoked when you have and  exchange Rate. Defualt is null
   const convertedAmount = exchangeRate // Converted amount is essentially the total converted amount.
-    ? (amount * exchangeRate).toFixed(5)
+    ? (amount * exchangeRate).toFixed(4)
     : "---";
 
   return (
