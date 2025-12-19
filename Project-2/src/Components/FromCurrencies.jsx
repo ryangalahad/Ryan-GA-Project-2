@@ -1,9 +1,8 @@
 import React from 'react';
-// Both the FromCurrencies and ToCurrencies can both be done entirely on
-// Currency converter instead splitting it up.
+
 const FromCurrencies = (props) => {
 
-    //Function to track user selected currency
+
     function fromChange(event) {
         props.setFromCurrency(event.target.value);
   }

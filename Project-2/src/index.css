@@ -67,16 +67,14 @@ button:focus-visible {
   }
 }
 
-/* --- Styling for the About Page --- */
-
 .about-container {
     background-color: white;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Limits the width for better readability */
+    max-width: 800px;
     width: 90%;
-    margin: 50px auto; /* Centers the component on the page */
+    margin: 50px auto;
     line-height: 1.6;
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutApp = () => {
     return (
-        <div className="about-container"> {/* Apply a class for styling */}
+        <div className="about-container"> 
             <h1 className="about-title">Currency Converter App: Overview</h1>
             <p className="about-intro">
                 This application is engineered to deliver <strong>real-time</strong>, accurate currency exchange rates for over <strong>160+ global currencies</strong>. The app aims to provide users with reliable, 

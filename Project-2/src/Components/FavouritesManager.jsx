@@ -10,7 +10,6 @@ const FavouritesManager = (props) => {
   const [favourites, setFavourites] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  // Fetches all current favorite records from Airtable
 
   const fetchFavourites = useCallback(async () => {
     setIsLoading(true);
@@ -34,11 +33,11 @@ const FavouritesManager = (props) => {
     } finally {
       setIsLoading(false);
     }
-  }, []); // Empty dependency array means this function is stable.
+  }, []); 
 
   useEffect(() => {
     fetchFavourites();
-  }, [fetchFavourites]); // Evertime it changes, it re-renders the function.
+  }, [fetchFavourites]);
 
   const saveFavourites = async () => {
     if (!props.currentFrom || !props.currentTo) {
@@ -68,8 +67,8 @@ const FavouritesManager = (props) => {
       if (!res.ok) {
         throw new Error("Failed to save favourite ");
       }
-      await fetchFavourites(); // The await keyword pauses the execution of the saveFavourites function until fetchFavourites has completed its operation.
-      // Very Important. Will invoke fetchFavourites and run setFavourites with new data.
+      await fetchFavourites();
+      
     } catch (error) {
       setError(error.message);
     } finally {

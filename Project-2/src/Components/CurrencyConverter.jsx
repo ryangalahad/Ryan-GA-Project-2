@@ -180,8 +180,8 @@ const CurrencyConverter = (props) => {
   const [error, setError] = useState(null);
 
   const fetchRates = async () => {
-    setIsLoading(true); // 1. Start loading
-    setError(null); // 2. Clear any old errors
+    setIsLoading(true); 
+    setError(null); 
 
     try {
       const API_KEY = import.meta.env.VITE_EXCHANGE_CURRENCY_API;
@@ -203,14 +203,14 @@ const CurrencyConverter = (props) => {
     } catch (error) {
       setError(error.message);
     } finally {
-      setIsLoading(false); // Stops loading no matter what.
+      setIsLoading(false); 
     }
   };
   useEffect(() => {
     fetchRates();
-  }, [props.fromCurrency]); // Dependency array: runs fetch only when 'fromCurrency' changes
+  }, [props.fromCurrency]); 
 
-  // Below too find out the pupose of JSON.parse etc
+
   useEffect(() => {
     const storedRates = JSON.parse(sessionStorage.getItem("currentRates"));
     if (storedRates) {
@@ -218,8 +218,8 @@ const CurrencyConverter = (props) => {
     }
   }, [props.toCurrency]);
 
-  // Below will only be invoked when you have and  exchange Rate. Defualt is null
-  const convertedAmount = exchangeRate // Converted amount is essentially the total converted amount.
+
+  const convertedAmount = exchangeRate 
     ? (amount * exchangeRate).toFixed(4)
     : "---";
 
@@ -244,7 +244,7 @@ const CurrencyConverter = (props) => {
       <LoadingError passLoading={isLoading} passError={error} />
 
       {!isLoading &&
-        !error && ( // not loading and no error display this
+        !error && ( 
           <div className="result-display">
             <h3>
               {amount} {props.fromCurrency} =

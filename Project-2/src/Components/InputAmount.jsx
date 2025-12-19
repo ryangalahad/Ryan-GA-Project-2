@@ -2,7 +2,6 @@ import React from 'react';
 
 const InputAmount = (props) => {
 
-      // Function to track user typed amount
   function handleTypedAmount(event) {
     props.setAmount(event.target.value);
   }
