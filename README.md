@@ -66,9 +66,12 @@ To run this application locally, you must create a .env file in your root direct
 **Airtable Configuration:**
 
 >VITE_AIRTABLE_API_KEY=your_api_key_here
-VITE_AIRTABLE_BASE_ID=your_base_id_here
-VITE_AIRTABLE_TABLE_ID=your_table_id_here
-VITE_AIRTABLE_TABLE_NAME=your_table_name_here
+
+>VITE_AIRTABLE_BASE_ID=your_base_id_here
+
+>VITE_AIRTABLE_TABLE_ID=your_table_id_here
+
+>VITE_AIRTABLE_TABLE_NAME=your_table_name_here
 
 **Exchange Rate API Configuration:**
 >VITE_EXCHANGE_CURRENCY_API=your_api_key_here
